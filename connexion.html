@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connect - Accéder au Tunnel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd0d7, #5ed7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centre verticalement les éléments */
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #105fa9;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 1.5em;
+      cursor: pointer;
+      border: none;
+      background-color: #105fa9;
+      color: white;
+      border-radius: 15px;
+      display: inline-flex; /* Utiliser inline-flex pour centrer le contenu */
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button:disabled {
+      background-color: #156ec2;
+      cursor: not-allowed;
+    }
+
+    .checkbox-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* Centre la case à cocher horizontalement */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Connect</h1>
+    <button id="actionButton" class="button" disabled>
+      Accéder a Connect 🤩
+    </button>
+    <div class="checkbox-container">
+        <input type="checkbox" id="enableButtonCheckbox" onclick="toggleButton()"><p>J'accepte <a href="https://celestyassou.github.io/ConditionetPolitiquedeConfidentialit-Connect/Politique_de_Confidentialit%C3%A9_Conditions_G%C3%A9n%C3%A9rales.html"> Politique de Confidentialité</a></p></input>
+    </div>
+  </div>
+
+  <script>
+    function toggleButton() {
+        const checkbox = document.getElementById('enableButtonCheckbox');
+        const button = document.getElementById('actionButton');
+        button.disabled = !checkbox.checked;
+    }
+  </script>
+</body>
+</html>
